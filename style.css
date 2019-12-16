@@ -1,0 +1,12 @@
+.search {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.submit {
+  font-size: 2em;
+}
+.movename {
+  width: 400px;
+}
