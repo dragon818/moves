@@ -1,6 +1,13 @@
+body{
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
 .search {
   display: flex;
   justify-content: center;
+  height: 50px;
+  
 }
 
 .button {
@@ -8,12 +15,17 @@
   background-color: aquamarine;
   border-radius: 10px ;
 }
+
 .movename {
   width: 400px;
   font-size: 1.5em;
 }
-/* .moves {
-  display: flex;
-  justify-content: center;
-} */
 
+.detials {
+ background-color: blanchedalmond;
+ width: 300px;
+}
+
+.moves {
+  margin: auto;
+}

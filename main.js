@@ -32,14 +32,14 @@ div.addEventListener("click", (e) => {
     let details = new XMLHttpRequest();
     let obj1;
     details.onload = function() {
-      obj1 = JSON.parse(this.responseText);
+      obj1 = JSON.parse(this.response);
       console.log(e.target.parentElement.id);
       let ratingArray = obj1["Ratings"];
       let str = "";
       ratingArray.forEach(ele => { 
         str += `<p>Source :${ele["Source"]} Value: ${ele["Value"]}</p>`
       });
-      e.target.parentElement.insertAdjacentHTML('beforeend', `<div class = detials><p>${obj1["Actors"]}</p><p>${obj1["Plot"]}</p><p>${obj1["Metascore"]}</p>${str}<p>${obj1["Released"]}</p></div>`);
+      e.target.parentElement.insertAdjacentHTML('beforeend', `<div class = "detials"><p>${obj1["Actors"]}</p><p>${obj1["Plot"]}</p><p>${obj1["Metascore"]}</p>${str}<p>${obj1["Released"]}</p></div>`);
     };
     details.open("GET", `http://www.omdbapi.com/?i=${e.target.parentElement.id}&apikey=6a0a2e62`);
     details.send();
