@@ -1,9 +1,11 @@
-const moveName = document.querySelector('.movename');
+
+const button = document.querySelector('.button');
 const poster = document.querySelector('.moveinfo');
-let value;
+
 let div = document.querySelector(".moves");
+
 const getValue = function () {
-  value = moveName.value;
+  let value = document.querySelector('.movename').value;
   if (div) {
     div.innerHTML = '';
   }
@@ -16,7 +18,7 @@ const getValue = function () {
     })
   });
 }
-
+button.addEventListener('click', getValue);
 div.addEventListener("click", (e) => {
   const de = document.querySelector(".details");
 
@@ -39,3 +41,4 @@ div.addEventListener("click", (e) => {
     });
   }
 })
+
